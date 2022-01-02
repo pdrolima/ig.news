@@ -10,13 +10,11 @@ export function SignInWithGitHub() {
       type="button"
       className="h-12 bg-neutral-700 text-white flex
       items-center justify-center p-4 rounded-full hover:brightness-90"
+      onClick={() => signOut()}
     >
       <FaGithub className="w-5 h-5 text-green-400" />
       <span className="ml-4">{session.user.name}</span>
-      <FiX
-        className="text-neutral-400 w-4 h-4 ml-2"
-        onClick={() => signOut()}
-      />
+      <FiX className="text-neutral-400 w-4 h-4 ml-2" />
     </button>
   ) : (
     <button

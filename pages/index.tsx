@@ -14,7 +14,7 @@ interface HomeProps {
 
 export default function Home({ product }: HomeProps) {
   return (
-    <>
+    <SessionProvider>
       <Header />
       <main className="text-white font-bold max-w-screen-lg mx-auto px-0 py-8 flex items-center justify-between">
         <section className="max-w-xl">
@@ -43,7 +43,7 @@ export default function Home({ product }: HomeProps) {
         </section>
         <img src="/images/avatar.svg" alt="Girl coding react" />
       </main>
-    </>
+    </SessionProvider>
   );
 }
 
