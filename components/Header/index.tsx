@@ -1,31 +1,32 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
+import ctl from "@netlify/classnames-template-literals";
+import { SignInWithGitHub } from "../sIgnIn/GitHub";
 
 export function Header() {
   return (
-    <header className="bg-neutral-900 border-b border-neutral-600 h-14">
-      <div className="flex items-center h-16 mx-auto p-0 px-4">
+    <header className="bg-neutral-900 border-b border-neutral-600 h-20">
+      <div className="flex items-center max-w-screen-lg h-20 mx-auto">
         <Link href="/">
-          <Image
-            src="/images/logo.svg"
-            alt="logo"
-            width={110}
-            height={31}
-            fill="#fff"
-          />
+          <img src="/images/logo.svg" alt="logo" className="text-white" />
         </Link>
-        <nav className="mr-4 h-14 flex items-center ml-5 py-4">
+        <nav className="flex items-center ml-20 h-20 mx-auto">
           <Link href="#">
-            <a className="inline-block mr-4 leading-10 text-gray-100 font-normal hover:font-semibold transition-[hover] duration-100 border-b hover:border-b-orange-400">
+            <a
+              className="
+                inline-block mr-4 leading-[5rem] text-gray-100 font-normal hover:font-semibold transition-[color]
+                duration-300 border-b-2 border-transparent hover:border-b-orange-400"
+            >
               Home
             </a>
           </Link>
           <Link href="#">
-            <a className="inline-block mr-4 leading-10 text-gray-100 font-normal hover:font-semibold transition-[hover] duration-100 border-b hover:border-b-orange-400">
+            <a className="inline-block mr-4 leading-[5rem] text-gray-100 font-normal hover:font-semibold transition-[color] duration-300 border-b-2  border-transparent hover:border-b-orange-400 ml-8">
               Posts
             </a>
           </Link>
         </nav>
+        <SignInWithGitHub />
       </div>
     </header>
   );
